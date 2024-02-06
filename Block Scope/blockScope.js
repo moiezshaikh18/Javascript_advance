@@ -56,7 +56,7 @@
 
 // Function defination are also be hoisted
 
-//Closures
+//Closures /// Closure is function within the func
 
 // function createUser(name) {
 //   let greeting = "Hi";
