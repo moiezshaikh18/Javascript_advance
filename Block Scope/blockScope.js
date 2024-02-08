@@ -360,3 +360,77 @@
 //   console.log("hi");
 // }
 // document.addEventListener("scroll", throtal(sayHi, 1000));
+
+//Iterable and Generators
+
+// let range = {
+//   start: 0,
+//   end: 5,
+//   [Symbol.iterator]() {
+//     let that = this;
+//     let i = that.start;
+//     return {
+//       next() {
+//         return {
+//           value: i,
+//           done: i++ > that.end,
+//         };
+//       },
+//     };
+//   },
+// };
+
+// for (const iterator of range) {
+//   iterator;
+// }
+
+// let num = [1, 2, 3];
+
+// let it = num[Symbol.iterator]();
+
+// it.next();
+
+//Map-----------------
+
+// let map = new Map();
+
+// let person = { name: "john" };
+
+// let personAccount = { balance: 500 };
+
+// map.set(1, "str1");
+// map.set(person, personAccount);
+
+// let m = map.get(person);
+
+// let obj = { a: 3, b: 5, c: 6 };
+
+// let map = new Map(Object.entries(obj));
+
+// let d = [...map.entries()];
+
+// Generators
+
+// function* generatorFunction() {
+//   yield 1;
+//   yield 2;
+//   yield 3;
+// }
+
+// let generator = generatorFunction();
+// generator.next();
+// generator.next();
+// generator.next();
+// generator.next();
+
+// function* generator() {
+//   let i = 0;
+//   while (true) {
+//     yield i;
+//     i++;
+//   }
+// }
+
+// let g = generator();
+
+// let f = g.next();
