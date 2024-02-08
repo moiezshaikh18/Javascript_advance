@@ -434,3 +434,24 @@
 // let g = generator();
 
 // let f = g.next();
+
+//Prototypes
+
+//Protypical Inheritance
+
+// let animal = { eats: true };
+
+// let dog = { bark: true };
+
+// let animal = {
+//   eats: true,
+//   walks() {
+//     return "Walks";
+//   },
+// };
+
+// dog.__proto__ = animal;
+
+// console.log(dog);
+
+//Constructor , .prototype , Methods
