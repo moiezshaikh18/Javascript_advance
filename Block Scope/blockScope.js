@@ -259,3 +259,104 @@
 // momoized(44);
 // momoized(66);
 // momoized(6);
+
+//Call , Apply, Bind
+
+// let person = {
+//   name: "Moiz",
+//   age: 30,
+//   live: "Pune",
+// };
+
+// function checkName(a, ...b) {
+//   console.log(!!this.name, a, b);
+//   return !!this.name; //Boolean convert
+// }
+
+// person.check = checkName;
+
+// person.check();
+
+// checkName.call(person, 1);
+
+// checkName.apply(person, [1, 1, 2, 3]);
+
+// let fh = checkName.bind(person);
+
+// fh();
+
+// let task = {
+//   name: "demo",
+//   heavy(x) {
+//     console.log(x + ":heavy:" + this.name);
+//     return x + ":heavy" + this.name;
+//   },
+// };
+
+// function memoized(fx) {
+//   let map = new Map();
+//   return function (x) {
+//     if (map.has(x)) {
+//       return map.get(x);
+//     } else {
+//       let memoValue = fx.call(this, x);
+//       map.set(x, memoValue);
+//       return memoValue;
+//     }
+//   };
+// }
+// task.memoizedHeavy = memoized(task.heavy);
+// task.memoizedHeavy(1); // 1:heavyundefined
+// task.memoizedHeavy(2);
+
+//Debouncing
+
+// let count = 1;
+// function showCount() {
+//   count++;
+//   console.log({ count });
+// }
+
+// function debounce(fx, time) {
+//   let id = null;
+//   return function (x) {
+//     if (id) {
+//       clearTimeout(id);
+//     }
+//     id = setTimeout(fx, time, x);
+//   };
+// }
+
+// // let showCountD = debounce(showCount, 2000);
+// // showCount();
+
+// const el = document.getElementById("text1");
+// const logo = document.getElementById("text-output1");
+// el.addEventListener(
+//   "keyup",
+//   debounce(function (e) {
+//     logo.innerText = e.target.value;
+//   }, 1000)
+// );
+
+//Throttling
+
+// function throtal(fx, time) {
+//   let id = null;
+//   let args = [];
+//   return function (x) {
+//     if (!id) {
+//       id = setTimeout(fx, time, args[args.length - 1]);
+//       id = null;
+//     }
+//     args.push[x];
+//   };
+// }
+
+// // let showCountT = throtal(showCount, 3000);
+// // showCount();
+
+// function sayHi() {
+//   console.log("hi");
+// }
+// document.addEventListener("scroll", throtal(sayHi, 1000));
