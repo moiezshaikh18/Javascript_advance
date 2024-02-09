@@ -544,4 +544,34 @@
 // Those method which are not on prototype it directly on object those called
 //Static properties
 
-//Class Syntax
+//Class Syntax(Syntactic Sugar)
+
+// Prototype Version
+
+// function User(name) {
+//   this.name = name;
+// }
+
+// User.prototype.sayHi = function () {
+//   return this.name;
+// };
+
+// let user = new User("moiz");
+
+// user.sayHi(); //Moiz
+
+// Class Version
+
+class User {
+  constructor(name) {
+    this.name = name;
+  }
+
+  sayHi() {
+    return this.name;
+  }
+}
+
+let user = new User(); // user is the insatance of Class
+
+console.log(user.sayHi("Rahul"));
