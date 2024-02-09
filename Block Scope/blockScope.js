@@ -455,3 +455,93 @@
 // console.log(dog);
 
 //Constructor , .prototype , Methods
+
+// let usr = {
+//   name: "john",
+// };
+
+// function User(name) {
+//   this.name = name;
+// }
+
+// let user = new User("moiz"); // here 'user' is instance
+
+// console.log(User.prototype);
+// console.log(User.prototype.constructor === User);
+
+// console.log(user.__proto__);
+// console.log(user);
+
+//Use case of Prototype
+
+// function User(name) {
+//   this.name = name;
+// }
+
+// User.prototype.sayHi = function () {
+//   return this.name;
+// };
+
+// let user1 = new User("Wick");
+
+// console.log(user1.sayHi()); // 'Wick'
+
+// A usefull method : Reversing String
+
+// function User(name) {
+//   this.name = name;
+// }
+
+// User.prototype.reverseName = function () {
+//   return this.name.split("").reverse().join("");
+// };
+
+// let user1 = new User("Moiz");
+
+// console.log(user1.reverseName()); // Methods are available at instance of constructor
+
+// let animal = {
+//   eats: true,
+//   walk() {
+//     return "walks";
+//   },
+// };
+
+// function Dog() {
+//   this.barks = true;
+// }
+
+// Dog.prototype = animal;
+
+// let dog = new Dog();
+
+// dog.walk();
+
+//Native Prototype
+
+// console.log(Object.prototype, Array.prototype, Function.prototype);
+
+//Primitives as Objects
+
+// String.prototype;
+
+//Polyfillls
+
+// polyfills is a way of providing futuristic API not avaialable in browser
+
+// if (!Array.prototype.contains) {
+//   Array.prototype.contains = function (searchElement) {
+//     return this.indexOf(searchElement) >= 0 ? true : false;
+//   };
+// }
+
+// let a = ["moiz", "here", "mahesh"];
+
+// console.log(a.contains("moiz"));
+
+//Static properties
+
+// Those method which are not on prototype it directly on object those called
+//Static properties
+
+//Class Syntax
