@@ -739,3 +739,17 @@
 //   });
 
 // console.log("aa", a);
+
+// Async/Await
+
+// async function fetchData() {
+//   try {
+//     let fetchd = await fetch("https://jsonplaceholder.typicode.com/posts");
+//     let response = await fetchd.json();
+//     return response;
+//   } catch (error) {
+//     console.log(error.message);
+//   }
+// }
+
+// console.log(fetchData());
