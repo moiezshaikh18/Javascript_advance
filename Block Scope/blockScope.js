@@ -1,8 +1,6 @@
 // Advance JavaScripts
 // Scopes and Clouser
 
-const { log } = require("wd/lib/commands");
-
 // const win = require("global");
 
 // 4 Type of scopes , block, functional , module, global
@@ -695,3 +693,49 @@ const { log } = require("wd/lib/commands");
 // }
 
 // let user = new User("Moiz");
+
+//Asynchronus API's
+
+// console.log(1);
+
+// setTimeout(console.log, 1000, 3);
+
+// console.log(2);
+
+// function sum(a, b) {
+//   console.log(a + b);
+//   return a + b;
+// }
+
+// let asyncfx = (a, b) => {
+//   setTimeout(sum, 3000, a, b);
+// };
+// //callbacks
+// asyncfx(5, 8);
+
+// Callbacks Hell
+
+// Promises and chaining
+
+// is based Publish-subcriber
+
+// let promise = new Promise((resolve, reject) => {
+//   let fetchData = fetch("https://jsonplaceholder.typicode.com/posts");
+
+//   console.log(JSON.stringify(fetchData));
+//   resolve(fetchData);
+// });
+
+// let result;
+// let a = promise
+//   .then((res) => {
+//     return res.json();
+//   })
+//   .then((data) => {
+//     return data;
+//   })
+//   .catch((err) => {
+//     console.log(err.message);
+//   });
+
+// console.log("aa", a);
