@@ -1,6 +1,8 @@
 // Advance JavaScripts
 // Scopes and Clouser
 
+const { log } = require("wd/lib/commands");
+
 // const win = require("global");
 
 // 4 Type of scopes , block, functional , module, global
@@ -562,16 +564,134 @@
 
 // Class Version
 
-class User {
-  constructor(name) {
-    this.name = name;
-  }
+// class User {
+//   constructor(name) {
+//     this.name = name;
+//   }
 
-  sayHi() {
-    return this.name;
-  }
-}
+//   sayHi() {
+//     return this.name;
+//   }
+// }
 
-let user = new User(); // user is the insatance of Class
+// User.prototype.sayHello = function () {
+//   return this.name;
+// };
 
-console.log(user.sayHi("Rahul"));
+// let user = new User("moiz"); // user is the insatance of Class
+
+// console.log(user.sayHi());
+// console.log(user.sayHello());
+
+// Getters and Setters
+
+// class User {
+//   constructor(firstName, lastName) {
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//   }
+
+//   get fullName() {
+//     return this.firstName + " " + this.lastName;
+//   }
+
+//   set fullName(_fullName) {
+//     this.firstName = _fullName.split(" ")[0];
+//     this.lastName = _fullName.split(" ")[1];
+//   }
+// }
+
+// let user = new User("Moiz", "shaikh");
+
+// console.log(user.fullName);
+
+//Computed Property Names
+
+// let variableName = "hello";
+
+// class User {
+//   constructor(name) {
+//     this.name = name;
+//   }
+
+//   [variableName]() {
+//     return this.name;
+//   }
+// }
+
+// let user = new User("Moiz");
+
+// console.log(user.hello());
+
+//'this' binding issue
+
+// class Button {
+//   constructor(value) {
+//     console.log(this.value);
+//     this.value = value;
+//   }
+
+//   click() {
+//     return this.value;
+//   }
+// }
+
+// let button = new Button("Play");
+
+// setTimeout(button.click, 1000);
+
+//Inheritance
+
+// class shape {
+//   constructor(name) {
+//     this.name = name;
+//   }
+
+//   displayShape() {
+//     return this.name;
+//   }
+// }
+
+// class rectangle extends shape {
+//   constructor(name, width, height) {
+//     super(name);
+//     this.width = width;
+//     this.height = height;
+//     this.area = width * height;
+//   }
+// }
+
+// let rect = new rectangle("circle", 10, 15);
+
+// console.log(rect.displayShape());
+
+// console.log(rect.area);
+
+// Static methods
+
+// class Shape {
+//   constructor(name, area) {
+//     this.name = name;
+//     this.area = area;
+//   }
+
+//   static areEqual(shape1, shape2) {
+//     return shape1.name === shape2.name && shape1.area === shape2.area;
+//   }
+// }
+
+// let s1 = new Shape("rect", 100);
+// let s2 = new Shape("rect", 100);
+
+// console.log(Shape.areEqual(s1, s2));
+
+//Private and Protected
+
+// class User {
+//   _type = "admin";
+//   constructor(name) {
+//     this.name = name;
+//   }
+// }
+
+// let user = new User("Moiz");
